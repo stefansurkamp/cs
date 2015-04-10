@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+	<title>CodeSkills | Eclipse Gamification Plugin</title>
+	<meta charset="iso-8859-1">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="style.css" type="text/css" media="all">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,700,300italic' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<script>
+		function changeImageSize() {
+			var scroll = getCurrentScroll();
+
+			if(scroll >= 350) {
+				$('#bigImage').css('height', 150);
+				$('#titleContainer').css('bottom', 10);
+				$('#codeSkillsIntro').css('opacity', 0);				
+			}
+			else {
+				$('#bigImage').height(500-scroll);
+				$('#titleContainer').css('bottom', (Math.floor(500-scroll)/2)-65);
+				$('#codeSkillsIntro').css('opacity', (Math.floor(350-scroll))/110);
+			}
+
+		}
+
+		function getCurrentScroll() {
+			return window.pageYOffset || document.documentElement.scrollTop;
+		}
+
+		$( document ).ready(function() {
+			var scroll = getCurrentScroll();
+			if(scroll >= 350) {
+				$('#bigImage').css('height', 150);
+				$('#titleContainer').css('bottom', 10);
+				$('#codeSkillsIntro').css('opacity', 0);
+			}
+			else {
+				$('#bigImage').height(500-scroll);
+				$('#titleContainer').css('bottom', (Math.floor(500-scroll)/2)-65);
+				$('#codeSkillsIntro').css('opacity', (Math.floor(350-scroll))/110);
+
+			}
+
+			$('#codeSkillsTitle').on('click', function(e){
+				$('body').animate({scrollTop:0}, '500');
+				e.preventDefault();
+			});
+		});
+
+		$(window).scroll(function() {
+			changeImageSize();
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div id="bigImage">
+		<div id="titleContainer">
+			<div id="codeSkillsIntro">Show Your</div>
+			<div id="codeSkillsTitle"><a href=#>CodeSkills</a></div>
+		</div>
+	</div>
+	<div id="mobileHeader">
+		<div id="titleContainer">
+			<div id="codeSkillsTitle"><a href=#>CodeSkills</a></div>
+		</div>
+	</div>
+
+
+	<div id="pageContent">
+
+		<div class="part"><div class="contentPart">
+			<h1>0. Introduction</h1>
+
+			CodeSkills is a gamification plug-in for the <a href="http://eclipse.org" target="_blank">Eclipse IDE</a>. It currently supports 20 achievements for Java. Its aim is to improve users' programming skills as well as their fun when doing so.
+		</div></div>
+
+		<div class="part highlight"><div class="contentPart">
+			<h1>1. Download the plug-in</h1>
+
+			<div class="downloadButton">
+				<a href="#" class="ghost-button">Download CodeSkills (v 1.0)</a>
+			</div>
+
+			<h1>2. Requirements</h1>
+			The CodeSkills plug-in relies only on few other Eclipse plug-ins for its successful exection. If you have an up-to-date Java developer version of Eclipse installed, there should be no problems.
+		</div></div>
+
+		<div class="part highlightabove"><div class="contentPart">
+			<h1>3. Installation</h1>
+			To install the plug-in, copy the <i>codeskills.jar</i> to your Eclipse's <i>dropins</i> folder. 
+			<h1>4. Running CodeSkills for the first time</h1>
+			The next time you start Eclipse, the plug-in should be succesfully loaded.
+			<br><small>Note: If you did not specify a Secure Storage password before, a message will appear that invites you to do so. Don't worry. This is because CodeSkills uses the local storage to save your achievements and points. Just set a password and you'll be fine. </small>
+		</div></div>
+
+		<div class="part highlight "><div class="contentPart lastPart">
+			<h1>5. Support CodeSkills</h1>
+			Feel free to participate! There is still a lot to do, e.g. further language support or additional achievements as well as code improvements. For further details check out the <a href="#">CodeSkills GitHub page</a>.
+
+			<h1>6. Questions?</h1>
+			<!--Why is there no Eclipse update site?<br>
+			<small>
+			The update site is still to come.
+			</small>
+
+			<br><br>When will there be an online ranking?<br>
+			<small>
+			The online ranking is an essential feature and part of the gamification strategy of CodeSkills. If there is enough interest, such a feature might be implemented in the future.
+			</small>
+
+			<br><br>When will CodeSkills support my language?<br>
+			<small>
+			I'm currently working on further language support and a better integration of language settings in general. If you want to help introducing your language check the <a href="#">CodeSkills GitHub page</a>.
+			</small>
+
+			<br><br>If your questions are not answered by the listing above, f
+			-->
+			Feel free to <a href="#">contact me</a>.
+			<footer>
+				This is a project by Stefan Surkamp
+			</footer>
+		</div></div>
+
+		
+	</div>
+</body>
+</html>
