@@ -13,14 +13,14 @@
 			var scroll = getCurrentScroll();
 
 			if(scroll >= 350) {
-				$('#bigImage').css('height', 150);
-				$('#titleContainer').css('bottom', 10);
-				$('#codeSkillsIntro').css('opacity', 0);				
+				$('#desktopHeader').css('height', 150);
+				$('.titleContainer').css('bottom', 10);
+				$('.codeSkillsIntro').css('opacity', 0);				
 			}
 			else {
-				$('#bigImage').height(500-scroll);
-				$('#titleContainer').css('bottom', (Math.floor(500-scroll)/2)-65);
-				$('#codeSkillsIntro').css('opacity', (Math.floor(350-scroll))/110);
+				$('#desktopHeader').height(500-scroll);
+				$('.titleContainer').css('bottom', (Math.floor(500-scroll)/2)-65);
+				$('.codeSkillsIntro').css('opacity', (Math.floor(350-scroll))/110);
 			}
 
 		}
@@ -30,27 +30,32 @@
 		}
 
 		$( document ).ready(function() {
-			var scroll = getCurrentScroll();
-			if(scroll >= 350) {
-				$('#bigImage').css('height', 150);
-				$('#titleContainer').css('bottom', 10);
-				$('#codeSkillsIntro').css('opacity', 0);
-			}
-			else {
-				$('#bigImage').height(500-scroll);
-				$('#titleContainer').css('bottom', (Math.floor(500-scroll)/2)-65);
-				$('#codeSkillsIntro').css('opacity', (Math.floor(350-scroll))/110);
+			if($('#desktopHeader').css('display') == 'block') {
+				var scroll = getCurrentScroll();
+				if(scroll >= 350) {
+					$('#desktopHeader').css('height', 150);
+					$('.titleContainer').css('bottom', 10);
+					$('.codeSkillsIntro').css('opacity', 0);
+				}
+				else {
+					$('#desktopHeader').height(500-scroll);
+					$('.titleContainer').css('bottom', (Math.floor(500-scroll)/2)-65);
+					$('.codeSkillsIntro').css('opacity', (Math.floor(350-scroll))/110);
 
+				}
 			}
 
-			$('#codeSkillsTitle').on('click', function(e){
+			$('.codeSkillsTitle').on('click', function(e){
 				$('body').animate({scrollTop:0}, '500');
 				e.preventDefault();
 			});
+
 		});
 
 		$(window).scroll(function() {
-			changeImageSize();
+			if($('#desktopHeader').css('display') == 'block') {
+				changeImageSize();
+			}
 		});
 	</script>
 
@@ -58,15 +63,15 @@
 
 <body>
 
-	<div id="bigImage">
-		<div id="titleContainer">
-			<div id="codeSkillsIntro">Show Your</div>
-			<div id="codeSkillsTitle"><a href=#>CodeSkills</a></div>
+	<div id="desktopHeader">
+		<div class="titleContainer">
+			<div class="codeSkillsIntro">Show Your</div>
+			<div class="codeSkillsTitle"><a href=#>CodeSkills</a></div>
 		</div>
 	</div>
 	<div id="mobileHeader">
-		<div id="titleContainer">
-			<div id="codeSkillsTitle"><a href=#>CodeSkills</a></div>
+		<div class="titleContainer">
+			<div class="codeSkillsTitle"><a href=#>CodeSkills</a></div>
 		</div>
 	</div>
 
@@ -74,35 +79,35 @@
 	<div id="pageContent">
 
 		<div class="part"><div class="contentPart">
-			<h1>0. Introduction</h1>
+			<h1>1. Introduction</h1>
 
 			CodeSkills is a gamification plug-in for the <a href="http://eclipse.org" target="_blank">Eclipse IDE</a>. It currently supports 20 achievements for Java. Its aim is to improve users' programming skills as well as their fun when doing so.
 		</div></div>
 
 		<div class="part highlight"><div class="contentPart">
-			<h1>1. Download the plug-in</h1>
+			<h1>2. Download the plug-in</h1>
 
 			<div class="downloadButton">
 				<a href="#" class="ghost-button">Download CodeSkills (v 1.0)</a>
 			</div>
 
-			<h1>2. Requirements</h1>
+			<h1>3. Requirements</h1>
 			The CodeSkills plug-in relies only on few other Eclipse plug-ins for its successful exection. If you have an up-to-date Java developer version of Eclipse installed, there should be no problems.
 		</div></div>
 
 		<div class="part highlightabove"><div class="contentPart">
-			<h1>3. Installation</h1>
+			<h1>4. Installation</h1>
 			To install the plug-in, copy the <i>codeskills.jar</i> to your Eclipse's <i>dropins</i> folder. 
-			<h1>4. Running CodeSkills for the first time</h1>
+			<h1>5. Running CodeSkills for the first time</h1>
 			The next time you start Eclipse, the plug-in should be succesfully loaded.
 			<br><small>Note: If you did not specify a Secure Storage password before, a message will appear that invites you to do so. Don't worry. This is because CodeSkills uses the local storage to save your achievements and points. Just set a password and you'll be fine. </small>
 		</div></div>
 
 		<div class="part highlight "><div class="contentPart lastPart">
-			<h1>5. Support CodeSkills</h1>
+			<h1>6. Support CodeSkills</h1>
 			Feel free to participate! There is still a lot to do, e.g. further language support or additional achievements as well as code improvements. For further details check out the <a href="#">CodeSkills GitHub page</a>.
 
-			<h1>6. Questions?</h1>
+			<h1>7. Questions?</h1>
 			<!--Why is there no Eclipse update site?<br>
 			<small>
 			The update site is still to come.

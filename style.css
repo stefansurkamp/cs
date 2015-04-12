@@ -10,7 +10,7 @@
 		background-color: #F7F7F7;
 	}
 
-	#bigImage {
+	#desktopHeader {
 		background-color: rgb(44, 156, 134);
 		height: 500px;
 		width: 100%;
@@ -23,7 +23,7 @@
 		display: none;
 	}
 
-	#titleContainer {
+	.titleContainer {
 		position: absolute;
 		width: 100%;
 		margin-left: auto;
@@ -31,7 +31,7 @@
 		bottom: 250px;
 	}
 
-	#codeSkillsIntro {
+	.codeSkillsIntro {
 		margin-top: 150px;
 		color: #F2B760;
 		font-weight: 300;
@@ -40,14 +40,14 @@
 		text-align: center;
 	}
 
-	#codeSkillsTitle {
+	.codeSkillsTitle {
 		font-weight: 700;
 		font-size: 60px;
 		text-align: center;
 		margin-bottom: 30px;
 	}
 
-	#codeSkillsTitle a {
+	.codeSkillsTitle a {
 		text-decoration: none;
 		color: #fff;
 	}
@@ -158,6 +158,9 @@
 		text-align: center !important;
 		width: 100% !important;
 	}
+
+	#mobileHeader {
+		display: none;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -171,11 +174,11 @@
 		z-index: 5000;
 	}
 
-	#bigImage {
+	#desktopHeader {
 		display: none;
 	}
 
-	#titleContainer {
+	.titleContainer {
 		position: absolute;
 		width: 100%;
 		margin-left: auto;
@@ -184,5 +187,16 @@
 	}
 
 	#pageContent {
-		padding-top: 150px;	
+		padding-top: 150px;
+	}
+
+	.contentPart{
+		min-width: 320px;
+		font-weight: 300;
+		font-size: 26px;
+		text-align: left;
+		line-height: 1.5;
+		margin: 0 auto;
+		padding: 50px 10px;
+	}
 }
