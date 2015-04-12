@@ -115,24 +115,11 @@
 		margin-top: 0px !important;
 	}
 
-	.contentPart h1::first-letter { 
+	.contentPart h1 .enumeration { 
 		color: #F2B760;
 		margin-right: 10px;
+		display: inline-block;
 	}
-
-	ol {
-		list-style-type: none;
-	}
-
-	ul li {
-		list-style-type: none;
-	}
-
-	ul li:before {
-		content: '\3E';
-		margin: 0 10px;
-	}
-
 
 	.ghost-button {
 		margin: 0 auto;
