@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="main.ListenerInitializer">
+      </startup>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            description="Show statistics"
+            id="JavaGamificationPlugin.commands.showStats"
+            name="Show statistics">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="handlers.OpenStatisticSiteHandler"
+            commandId="JavaGamificationPlugin.commands.showStats">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="CodeSkills"
+               mnemonic="C">
+            <command
+                  commandId="JavaGamificationPlugin.commands.showStats"
+                  icon="img/menuIcon.png"
+                  label="Show statistics"
+                  mnemonic="S"
+                  tooltip="Show statistics">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
