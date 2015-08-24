@@ -67,6 +67,10 @@
 		text-align: center;
 	}
 
+	footer #heart {
+		color: #f00;
+	}
+
 	.part {
 		position: relative;
 		float: left;
