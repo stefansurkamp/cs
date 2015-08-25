@@ -1,0 +1,15 @@
+#desktopHeader {
+	height: 150px !important;
+}
+
+#pageContent {
+	padding-top: 150px !important;
+}
+
+.titleContainer {
+	bottom: 10px !important;
+}
+
+.codeSkillsIntro {
+	opacity: 0 !important;
+}

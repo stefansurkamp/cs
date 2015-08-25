@@ -3,81 +3,25 @@
 <head>
 	<title>CodeSkills | Eclipse Gamification Plugin</title>
 	<meta charset="utf-8">
+	<meta name="keywords" content="codeskills eclipse gamification plugin plug-in java stefan surkamp serious game achievement programming ide skill fun dropin ">
+	<meta name="description" content="CodeSkills is a gamification plug-in for the Eclipse IDE. It currently supports 20 achievements for Java. Its aim is to improve users' programming skills as well as their fun when doing so.">
+	<meta name="robots" content="index,follow">
+
+	<meta name="geo.region" content="DE-BW">
+	<meta name="geo.placename" content="Stuttgart">
+	<meta name="geo.position" content="48.775846;9.182932">
+	<meta name="ICBM" content="48.775846, 9.182932">
+
+	<meta name="language" content="en">	
+
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="style.css" type="text/css" media="all">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,700,300italic' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js" async></script>
 	<noscript>
-		<style>
-			#desktopHeader {
-				height: 150px !important;
-			}
-
-			#pageContent {
-				padding-top: 150px !important;
-			}
-
-			.titleContainer {
-				bottom: 10px !important;
-			}
-
-			.codeSkillsIntro {
-				opacity: 0 !important;
-			}
-		</style>
+		<link rel="stylesheet" href="noscript.css" type="text/css" media="all">
 	</noscript>
-
-	<script>
-		function changeImageSize() {
-			var scroll = getCurrentScroll();
-
-			if(scroll >= 350) {
-				$('#desktopHeader').css('height', 150);
-				$('.titleContainer').css('bottom', 10);
-				$('.codeSkillsIntro').css('opacity', 0);				
-			}
-			else {
-				$('#desktopHeader').height(500-scroll);
-				$('.titleContainer').css('bottom', (Math.floor(500-scroll)/2)-65);
-				$('.codeSkillsIntro').css('opacity', (Math.floor(350-scroll))/110);
-			}
-
-		}
-
-		function getCurrentScroll() {
-			return window.pageYOffset || document.documentElement.scrollTop;
-		}
-
-		$( document ).ready(function() {
-			if($('#desktopHeader').css('display') == 'block') {
-				var scroll = getCurrentScroll();
-				if(scroll >= 350) {
-					$('#desktopHeader').css('height', 150);
-					$('.titleContainer').css('bottom', 10);
-					$('.codeSkillsIntro').css('opacity', 0);
-				}
-				else {
-					$('#desktopHeader').height(500-scroll);
-					$('.titleContainer').css('bottom', (Math.floor(500-scroll)/2)-65);
-					$('.codeSkillsIntro').css('opacity', (Math.floor(350-scroll))/110);
-
-				}
-			}
-
-			$('.codeSkillsTitle').on('click', function(e){
-				$('body').animate({scrollTop:0}, '500');
-				e.preventDefault();
-			});
-
-		});
-
-		$(window).scroll(function() {
-			if($('#desktopHeader').css('display') == 'block') {
-				changeImageSize();
-			}
-		});
-	</script>
-
 </head>
 
 <body>
@@ -85,7 +29,7 @@
 	<div id="desktopHeader">
 		<div class="titleContainer">
 			<div class="codeSkillsIntro">Show Your</div>
-			<div class="codeSkillsTitle"><a href=#>CodeSkills</a></div>
+			<div class="codeSkillsTitle"><a href="#">CodeSkills</a></div>
 		</div>
 	</div>
 	<div id="mobileHeader">
@@ -145,14 +89,14 @@
 			</small>
 
 			<br><br>If your questions are not answered by the listing above,
-			-->
-			<!--Feel free to <a href="#">contact me</a>.-->
-			<footer>
-				Made with <span id="heart">&#128155;</span> by Stefan Surkamp.
-			</footer>
-		</div></div>
+		-->
+		<!--Feel free to <a href="#">contact me</a>.-->
+		<footer>
+			Made with <span id="heart">&#128155;</span> by Stefan Surkamp.
+		</footer>
+	</div></div>
 
-		
-	</div>
+
+</div>
 </body>
 </html>
