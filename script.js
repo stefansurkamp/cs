@@ -35,7 +35,7 @@ function changeImageSize() {
 			}
 
 			$('.codeSkillsTitle').on('click', function(e){
-				$('body').animate({scrollTop:0}, '500');
+				$('html,body').animate({scrollTop:0}, '500');
 				e.preventDefault();
 			});
 
